@@ -2,6 +2,7 @@
 " File: scrawl.vim
 " Description: vim plugin which provides a customizable scratch buffer
 " Maintainer: Evergreen
+" Version: 0.1.0
 " Last Change: 26 January, 2015
 " License: Vim License
 " ============================================================================
@@ -33,6 +34,7 @@ endfunction
 " }}}
 
 " SECTION: Initialize variables (options) {{{2
+call s:initVariable('g:scrawl_show_line_numbers', 1)
 call s:initVariable('g:scrawl_split_direction', 0)
 call s:initVariable('g:scrawl_window_height', 25)
 call s:initVariable('g:scrawl_window_width', 25)
