@@ -1,5 +1,5 @@
-Scrawl
-======
+scrawl.vim
+==========
 
 Introduction
 ------------
@@ -24,3 +24,12 @@ copy and paste:
 Any other plugin managers should work fine as well, such as
 [vundle](https://github.com/gmarik/Vundle.vim).
 
+Usage
+-----
+
+...
+
+License
+-------
+
+scrawl.vim is distributed under the same license as vim.  See `:help license`.
