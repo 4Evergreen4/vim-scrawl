@@ -4,11 +4,10 @@ scrawl.vim
 Introduction
 ------------
 
-Scrawl is a customizable scratch buffer.  You can write anything in it, and
-also evaluate it as vimscript.  It is a temporary buffer though, so all
-changes in it will be discarded when vim is quit.  This was heavily inspired by
-[scratch.vim](http://www.vim.org/scripts/script.php?script_id=664), but
-it didn't have enough customization options, so I made this.
+Scrawl is a customizable scratch buffer for writing temporary notes, and for
+testing small code pieces. Changes in it will be discarded when vim is quit.
+This was heavily inspired by [scratch.vim](http://www.vim.org/scripts/script.php?script_id=664)
+I made this because it wasn't customizable enough.
 
 Installation
 ------------
@@ -27,7 +26,16 @@ Any other plugin managers should work fine as well, such as
 Usage
 -----
 
-...
+Use `:ScrawlSplit` to open scrawl in a new split.  You can then use
+`:ScrawlClose` to close that split from anywhere in the tab.  If you want to
+open scrawl in the current buffer, use `:ScrawlOpen`.  Then when you run
+`:ScrawlClose` in that current tab, it will return to editing the previous file.
+You can only have one scrawl buffer open in each tab.
+
+Options
+-------
+
+See `doc/scrawl.txt`.
 
 License
 -------

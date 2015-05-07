@@ -2,8 +2,8 @@
 " File: scrawl.vim
 " Description: vim plugin which provides a customizable scratch buffer
 " Maintainer: Evergreen
-" Version: 0.1.0
-" Last Change: May 5th, 2015
+" Version: 1.0.0
+" Last Change: May 6th, 2015
 " License: Vim License
 " ============================================================================
 
@@ -19,7 +19,7 @@ let g:loaded_scrawl = 1
 
 " ------------------------ Settings -------------------------------------- {{{
 
-" Function: s:initVariable(var, value)
+" Function: s:initVariable(var, value) {{{
 " This function is used to initialise a given variable to a given value. The
 " variable is only initialised if it does not exist prior
 "
@@ -29,7 +29,6 @@ let g:loaded_scrawl = 1
 "
 " Returns:
 " 1 if the var is set, 0 otherwise
-
 function! s:initVariable(var, value)
     if !exists(a:var)
         exec 'let ' . a:var . ' = ' . "'" . substitute(a:value, "'", "''", "g") . "'"
@@ -37,18 +36,24 @@ function! s:initVariable(var, value)
     endif
     return 0
 endfunction
+" }}}
 
-" Default values for settings
-
-call s:initVariable('g:scrawl_default_filetype', 'text')
+" Section: Default settings {{{
 call s:initVariable('g:scrawl_buffer_name', '__Scrawl__')
+call s:initVariable('g:scrawl_filetype', 'text')
 call s:initVariable('g:scrawl_split_direction', 0)
-call s:initVariable('g:scrawl_window_height', 25)
-call s:initVariable('g:scrawl_window_width', 25)
+call s:initVariable('g:scrawl_window_size', 0)
+" }}}
 
 " ------------------------ END Settings ---------------------------------- }}}
 
 " ------------------------ Command Definitions --------------------------- {{{
+
+command -nargs=0 ScrawlSplitToggle call scrawl#toggleWindow()
+command -nargs=0 ScrawlBufferToggle call scrawl#toggleBuffer()
+command -nargs=0 ScrawlBuffer call scrawl#openScrawlBuffer()
+command -nargs=0 ScrawlClose call scrawl#closeScrawlWindow()
+command -nargs=0 ScrawlSplit call scrawl#openScrawlWindow()
 
 " ------------------------ END Command Definitions ----------------------- }}}
 
