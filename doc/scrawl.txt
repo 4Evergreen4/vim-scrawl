@@ -114,7 +114,7 @@ The stable versions are available at
     {insert vim(dot)org link here}
 
 The development versions are available on github
-    {insert github link here}.
+    https://github.com/4Evergreen4/vim-scrawl
 
 +----------------------------------------------------------------------------+~
 CREDITS                                                         *ScrawlCredits*

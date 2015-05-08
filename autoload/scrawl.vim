@@ -31,7 +31,9 @@ function! scrawl#setBufOptions()
     setlocal bufhidden=hide
     setlocal foldcolumn=0
     setlocal nobuflisted
-    execute 'setfiletype ' . g:scrawl_filetype
+    if &filetype ==# ''
+        execute 'setfiletype ' . g:scrawl_filetype
+    endif
 endfunction
 " }}}
 
