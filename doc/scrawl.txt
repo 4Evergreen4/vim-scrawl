@@ -111,7 +111,7 @@ The author of Scrawl is an Evergreen Tree who lives in a forest somewhere in
 the U.S.A.
 
 The stable versions are available at
-    {insert vim(dot)org link here}
+  http://www.vim.org/scripts/script.php?script_id=5179
 
 The development versions are available on github
     https://github.com/4Evergreen4/vim-scrawl
